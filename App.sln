@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetAppProject", "BudgetAppProject\BudgetAppProject.csproj", "{87C17454-292E-48EC-A00E-37235EA05548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetAppLibray", "BudgetAppLibray\BudgetAppLibray.csproj", "{9139B3F3-77D2-4A5A-9D7B-DD152EFCC564}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87C17454-292E-48EC-A00E-37235EA05548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87C17454-292E-48EC-A00E-37235EA05548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87C17454-292E-48EC-A00E-37235EA05548}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{87C17454-292E-48EC-A00E-37235EA05548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87C17454-292E-48EC-A00E-37235EA05548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87C17454-292E-48EC-A00E-37235EA05548}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9139B3F3-77D2-4A5A-9D7B-DD152EFCC564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9139B3F3-77D2-4A5A-9D7B-DD152EFCC564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9139B3F3-77D2-4A5A-9D7B-DD152EFCC564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9139B3F3-77D2-4A5A-9D7B-DD152EFCC564}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F4D5650-B450-4943-82F0-204D9E79589E}
+	EndGlobalSection
+EndGlobal

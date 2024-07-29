@@ -1,0 +1,13 @@
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\bin\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.deps.json
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\bin\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.dll
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\bin\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.pdb
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.csproj.AssemblyReference.cache
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.AssemblyInfoInputs.cache
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.AssemblyInfo.cs
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.csproj.CoreCompileInputs.cache
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.sourcelink.json
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.dll
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\refint\BudgetAppLibray.dll
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\BudgetAppLibray.pdb
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-windows10.0.19041.0\ref\BudgetAppLibray.dll

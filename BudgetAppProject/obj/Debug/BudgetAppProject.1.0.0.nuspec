@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BudgetAppProject</id>
+    <version>1.0.0</version>
+    <authors>BudgetAppProject</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="93c77258a4862c9d9ff7196150daffed11692f15" />
+    <dependencies>
+      <group targetFramework="net8.0-android34.0">
+        <dependency id="BudgetAppLibray" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls.Compatibility" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.bundle_green" version="2.1.8" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0-ios17.2">
+        <dependency id="BudgetAppLibray" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls.Compatibility" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.bundle_green" version="2.1.8" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0-maccatalyst17.2">
+        <dependency id="BudgetAppLibray" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls.Compatibility" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.bundle_green" version="2.1.8" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0-windows10.0.19041">
+        <dependency id="BudgetAppLibray" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls.Compatibility" version="8.0.7" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.bundle_green" version="2.1.8" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-android\BudgetAppProject.runtimeconfig.json" target="lib\net8.0-android34.0\BudgetAppProject.runtimeconfig.json" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-android\BudgetAppProject.dll" target="lib\net8.0-android34.0\BudgetAppProject.dll" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-android\BudgetAppProject.xml" target="lib\net8.0-android34.0\BudgetAppProject.xml" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-ios\iossimulator-x64\BudgetAppProject.runtimeconfig.json" target="lib\net8.0-ios17.2\BudgetAppProject.runtimeconfig.json" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-ios\iossimulator-x64\BudgetAppProject.dll" target="lib\net8.0-ios17.2\BudgetAppProject.dll" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\BudgetAppProject.runtimeconfig.json" target="lib\net8.0-maccatalyst17.2\BudgetAppProject.runtimeconfig.json" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\BudgetAppProject.dll" target="lib\net8.0-maccatalyst17.2\BudgetAppProject.dll" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.runtimeconfig.json" target="lib\net8.0-windows10.0.19041\BudgetAppProject.runtimeconfig.json" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.dll" target="lib\net8.0-windows10.0.19041\BudgetAppProject.dll" />
+    <file src="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri" target="lib\net8.0-windows10.0.19041\resources.pri" />
+  </files>
+</package>
