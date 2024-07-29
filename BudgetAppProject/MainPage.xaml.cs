@@ -4,13 +4,10 @@ namespace BudgetAppProject {
     public partial class MainPage : ContentPage {
         private readonly LocalDbService _dbService;
 
-
         private double Income = 0;
         private double Tax = 0;
         private double IncomeAfterTax = 0;
         private List<DisplayExpense> displayExpenses = new List<DisplayExpense>();
-        //Profile EmptyProfile = new("Empty");
-        //List<Profile> list = new List<Profile>();
 
         public MainPage(LocalDbService dbService) {
             InitializeComponent();
@@ -88,10 +85,6 @@ namespace BudgetAppProject {
             if (exp != null ) {
                 Profile selected = (Profile)ProfilePicker.SelectedItem;
 
-                //selected.removeExpense(exp); // idk if we need this
-                // IDk if we need this
-                //selected.Expenses.Remove(exp);
-
                 //await _dbService.SaveProfile(selected); // idk if we need this
                 await _dbService.DeleteExpense(exp);
             }
@@ -153,9 +146,6 @@ namespace BudgetAppProject {
 
                 //We dont want to save anything to the db until it saved 
 
-                // Add Expense to profile object and then save in db
-                // Add Expens to databsae
-                //selected.addExpense(new Expense());
                 refresh();
             }
         }
