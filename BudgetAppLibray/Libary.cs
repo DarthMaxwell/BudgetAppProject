@@ -3,7 +3,6 @@ using System.Collections;
 using System.Globalization;
 
 namespace BudgetAppLibray {
-    // All the code in this file is included in all platforms.
     public class Libary {
     }
 
@@ -20,18 +19,6 @@ namespace BudgetAppLibray {
         
         public Profile() {
             Expenses = new List<Expense>();
-        }
-
-        public void removeExpense(Expense expense) { // WHY DO WE HAVE THIS THE THING IS ALREADYU ÅUBLIC
-            Expenses.Remove(expense);
-        }
-
-        public void addExpense(Expense expense) {
-            this.Expenses.Add(expense);
-        }
-
-        public List<Expense> GetExpenses() {
-            return Expenses;
         }
 
         public override string ToString() {

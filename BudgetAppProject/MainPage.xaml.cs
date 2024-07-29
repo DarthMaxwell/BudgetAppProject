@@ -159,7 +159,7 @@ namespace BudgetAppProject {
                 List<Expense> temp = await _dbService.GetExpenses(EmptyProfile);
 
                 foreach (Expense expense in temp) {
-                    NewProfile.addExpense(expense);
+                    NewProfile.Expenses.Add(expense);
                 }
 
                 await _dbService.InsertProfileWithExpensesAsync(NewProfile);
