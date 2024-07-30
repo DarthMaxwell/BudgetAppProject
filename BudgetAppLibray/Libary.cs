@@ -11,7 +11,7 @@ namespace BudgetAppLibray {
     public class Profile {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Ignore]
         public List<Expense> Expenses { get; set; } // THIS SEAMS TO JUST BE EMOTY

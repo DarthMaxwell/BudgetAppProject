@@ -138,7 +138,7 @@ namespace BudgetAppProject {
             if (selected != null) {
                 Expense exp = new();
                 
-                selected.addExpense(exp); // idk how much this is needed
+                selected.Expenses.Add(exp); // idk how much this is needed
                 exp.ProfileId = selected.Id;
 
                 await _dbService.AddExpense(exp);

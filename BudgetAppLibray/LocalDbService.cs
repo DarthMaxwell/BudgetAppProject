@@ -24,9 +24,9 @@ namespace BudgetAppLibray {
                 Expense e2 = new Expense { Type = "Percent", ExpenseName = "Wants", Value = 30 };
                 Expense e3 = new Expense { Type = "Percent", ExpenseName = "Savings", Value = 20 };
 
-                d1.addExpense(e1);
-                d1.addExpense(e2);
-                d1.addExpense(e3);
+                d1.Expenses.Add(e1);
+                d1.Expenses.Add(e2);
+                d1.Expenses.Add(e3);
 
                 await InsertProfileWithExpensesAsync(d);
                 await InsertProfileWithExpensesAsync(d1);
@@ -54,9 +54,6 @@ namespace BudgetAppLibray {
 
         public async Task SaveProfile(Profile p) {
             await _connection.UpdateAsync(p);
-
-            
-            // maybe we need to save all the expenses to again
         }
 
         public async Task SaveExpense(Expense e) {

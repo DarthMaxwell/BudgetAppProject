@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-29T23:23:45.643</Modified>
+      <Modified>2024-07-29T23:37:29.380</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-29T23:23:45.428</Modified>
+      <Modified>2024-07-29T23:36:10.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.runtimeconfig.json">
       <PackagePath>BudgetAppProject.runtimeconfig.json</PackagePath>
-      <Modified>2024-07-26T21:07:10.880</Modified>
+      <Modified>2024-07-29T23:36:10.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.dll">
       <PackagePath>BudgetAppProject.dll</PackagePath>
-      <Modified>2024-07-29T23:23:44.585</Modified>
+      <Modified>2024-07-29T23:37:28.486</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppLibray\bin\Debug\net8.0-windows10.0.19041.0\BudgetAppLibray.dll">
       <PackagePath>BudgetAppLibray.dll</PackagePath>
-      <Modified>2024-07-29T23:23:34.601</Modified>
+      <Modified>2024-07-29T23:37:21.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BudgetAppProject.exe</PackagePath>
-      <Modified>2024-07-29T23:23:44.634</Modified>
+      <Modified>2024-07-29T23:37:28.530</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -291,7 +291,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.deps.json">
       <PackagePath>BudgetAppProject.deps.json</PackagePath>
-      <Modified>2024-07-26T21:07:10.770</Modified>
+      <Modified>2024-07-29T23:36:10.253</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

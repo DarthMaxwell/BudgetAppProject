@@ -18,3 +18,4 @@ C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-ios\BudgetApp
 C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-ios\refint\BudgetAppLibray.dll
 C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-ios\BudgetAppLibray.pdb
 C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-ios\ref\BudgetAppLibray.dll
+C:\Users\Maxwe\source\repos\App\BudgetAppLibray\obj\Release\net8.0-ios\build-signature\signature
