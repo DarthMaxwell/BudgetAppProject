@@ -4,19 +4,24 @@
              xmlns:local="clr-namespace:BudgetAppLibray;assembly=BudgetAppLibray"
     x:Class="BudgetAppProject.MainPage">
 
-    <!--NEEDS AUTO-->
-    
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
 
-            <HorizontalStackLayout>
-                <Picker 
+            <HorizontalStackLayout HorizontalOptions="Center">
+                
+                <Picker
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,10,0"
                     x:Name="ProfilePicker"
                     SelectedIndexChanged="ProfilePicker_SelectedIndexChanged"/>
-                <Button x:Name="RemoveProfileButton" Clicked="RemoveProfileButton_Clicked" IsVisible="True" Text="Delete Profile"/>
-                <!--Have a button for the deleting a profile unless there is only one account-->
+                <Button
+                    x:Name="RemoveProfileButton"
+                    Clicked="RemoveProfileButton_Clicked"
+                    IsVisible="True"
+                    HorizontalOptions="Start"
+                    Text="Delete"/>
             </HorizontalStackLayout>
             
             <Entry x:Name="IncomeEntry" Placeholder="Income" Unfocused="IncomeEntry_Unfocused"/>

@@ -16,7 +16,6 @@ namespace BudgetAppLibray {
         [Ignore]
         public List<Expense> Expenses { get; set; } // THIS SEAMS TO JUST BE EMOTY
 
-        
         public Profile() {
             Expenses = new List<Expense>();
         }
