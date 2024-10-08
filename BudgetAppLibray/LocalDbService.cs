@@ -75,6 +75,14 @@ namespace BudgetAppLibray {
         }
 
         public async Task DeleteProfile(Profile selected) {
+            List<Expense> exp = await GetExpenses(selected);
+
+            foreach (var x in exp)
+            {
+                // Dont need to await bec we await to delete the profile so we cant access these expenses after
+                DeleteExpense(x);
+            }            
+
             await _connection.DeleteAsync(selected);
         }
     }

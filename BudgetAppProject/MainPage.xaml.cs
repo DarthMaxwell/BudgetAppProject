@@ -12,7 +12,9 @@ namespace BudgetAppProject {
         public MainPage(LocalDbService dbService) {
             InitializeComponent();
             _dbService = dbService;
+
             InitializeAsync();
+            _dbService.ClearEmptyProfile();
 
             // Maybe clear Empty when open
         }
@@ -30,9 +32,11 @@ namespace BudgetAppProject {
 
         [Obsolete]
         private async void refresh() {
-            Expenses.ItemsSource = null;
+            // Maybe we want a refresh and then a refresh async to seprate things
 
             Profile selected = (Profile)ProfilePicker.SelectedItem;
+            
+            Expenses.ItemsSource = null;
 
             if (selected != null) {
                 var expenses = await _dbService.GetExpenses(selected);
@@ -43,23 +47,22 @@ namespace BudgetAppProject {
 
                 if (ProfilePicker.SelectedIndex != 0) {
                     SaveNewProfileStack.IsVisible = false;
+                    RemoveProfileButton.IsVisible = true;
                     ProfileNameEntry.Text = "";
                 } else {
+                    RemoveProfileButton.IsVisible = false;
                     SaveNewProfileStack.IsVisible = true;
                 }
+
+                refreshMoneyAfterIncomeAndTax();
             }
 
         }
 
         private void ProfilePicker_SelectedIndexChanged(object sender, EventArgs e) {
             refresh();
-            refreshMoneyAfterIncomeAndTax();
 
-            if (ProfilePicker.SelectedIndex == 0) {
-                RemoveProfileButton.IsVisible = false;
-            } else {
-                RemoveProfileButton.IsVisible = true;
-            }
+            // Save or clear the expenses ones that didnt get saved??
         }
 
         private async void EditButton_Clicked(object sender, EventArgs e) { // THIS DONT WORK
@@ -70,11 +73,10 @@ namespace BudgetAppProject {
             if (exp != null ) {
                 exp.Edit = (button.Text.Equals("Edit")) ? true : false; // Maybe we can use converter thign but idk how here
 
-                await _dbService.SaveExpense(exp);
+                await _dbService.SaveExpense(exp); // we only want to save the object if we select save
             }
 
             refresh();
-            refreshMoneyAfterIncomeAndTax();
         }
 
         private async void DeleteButton_Clicked(object sender, EventArgs e) {
@@ -85,12 +87,10 @@ namespace BudgetAppProject {
             if (exp != null ) {
                 Profile selected = (Profile)ProfilePicker.SelectedItem;
 
-                //await _dbService.SaveProfile(selected); // idk if we need this
                 await _dbService.DeleteExpense(exp);
             }
 
             refresh();
-            refreshMoneyAfterIncomeAndTax();
         }
 
         private void IncomeEntry_Unfocused(object sender, FocusEventArgs e) {
