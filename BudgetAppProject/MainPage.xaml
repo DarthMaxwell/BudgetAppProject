@@ -9,49 +9,25 @@
             Padding="30,0"
             Spacing="25">
 
-            <HorizontalStackLayout HorizontalOptions="Center">
-                
+            <HorizontalStackLayout>
                 <Picker
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,10,0"
+                    ItemsSource="{Binding Profiles}"
+                    ItemDisplayBinding="{Binding Id}"
+                    SelectedItem="{Binding SelectedProfile}"
                     x:Name="ProfilePicker"
                     SelectedIndexChanged="ProfilePicker_SelectedIndexChanged"/>
-                <Button
-                    x:Name="RemoveProfileButton"
-                    Clicked="RemoveProfileButton_Clicked"
-                    IsVisible="True"
-                    HorizontalOptions="Start"
-                    Text="Delete"/>
+
+                <ImageButton x:Name="EditButton" Clicked="EditButton_Clicked" Source="dotnet_bot.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"/>
+                <ImageButton x:Name="AddButtonProfile" Clicked="AddButtonProfile_Clicked" Source="dotnet_bot.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="60"/>
             </HorizontalStackLayout>
-            
-            <Entry x:Name="IncomeEntry" Placeholder="Income" Unfocused="IncomeEntry_Unfocused"/>
 
-            <Entry x:Name="TaxEntry" Placeholder="Tax percentage" Unfocused="TaxEntry_Unfocused"/>
-
-            <Label Text="Expenses"/>
-
-            <CollectionView x:Name="Expenses" ItemsLayout="VerticalList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame>
-                            <HorizontalStackLayout>
-                                <local:CustomSwitch1 IsToggled="{Binding Type, Converter={local:Text2BoolSwitchConverter}}" IsEnabled="{Binding Edit}"/>
-                                
-                                <Entry IsEnabled="{Binding Edit}" Text="{Binding Value}"/>
-                                
-                                <Entry Placeholder="Name" IsEnabled="{Binding Edit}" Text="{Binding ExpenseName}"/>
-                                
-                                <!--Dont let it go over budget-->
-                                <Button Text="{Binding Edit, Converter={local:Bool2TextButtonConverter}}" Clicked="EditButton_Clicked"/>
-
-                                <Button Text="Delete" Clicked="DeleteButton_Clicked"/>
-                            </HorizontalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-            <Button Text="Add +" Clicked="AddExpenseButton_Clicked"/>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Entry x:Name="IncomeEntry" Placeholder="Income" Unfocused="IncomeEntry_Unfocused" IsEnabled="False"/>
+    
+                <Picker x:Name="TaxPicker" SelectedIndexChanged="TaxPicker_SelectedIndexChanged" IsEnabled="False"/>
+            </HorizontalStackLayout>
 
             <CollectionView x:Name="DisplayExpenses" ItemsLayout="VerticalList">
                 <CollectionView.ItemTemplate>
@@ -66,10 +42,34 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <HorizontalStackLayout x:Name="SaveNewProfileStack" IsVisible="True">
-                <Button Text="Save new profile" Clicked="NewProfileButton_Clicked"/>
-                <Entry x:Name="ProfileNameEntry" Placeholder="Profile Name"/>
-            </HorizontalStackLayout>
+            <!--These should be hidden until hit the edit button-->
+            <Entry x:Name="ProfileNameEntry" IsVisible="False"/>
+
+            <CollectionView x:Name="Expenses" ItemsLayout="VerticalList" IsVisible="False" ItemsSource="{Binding Expenses}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame>
+                            <HorizontalStackLayout>
+                                <local:CustomSwitch1 IsToggled="{Binding Type, Converter={local:Text2BoolSwitchConverter}}"/>
+
+                                <Entry Placeholder="Value" Text="{Binding Value}"/>
+
+                                <Entry Placeholder="Name"  Text="{Binding ExpenseName}"/>
+
+                                <Button Text="Delete" Clicked="DeleteButton_Clicked"/>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button x:Name="AddExpenseButton" Text="Add Expense" Clicked="AddExpenseButton_Clicked" IsVisible="False"/>
+            <Button x:Name="SaveProfileButton" IsVisible="False" Clicked="SaveProfileButton_Clicked" Text="Save"/>
+            <Button x:Name="RemoveProfileButton" Clicked="RemoveProfileButton_Clicked" IsVisible="False" Text="Remove"/>
+
+            <!--Will need a new profile button for this one-->
+            <!--Can change the empty one to new profile and when its saved it needs a name and creates a new one-->
+            
 
         </VerticalStackLayout>
     </ScrollView>

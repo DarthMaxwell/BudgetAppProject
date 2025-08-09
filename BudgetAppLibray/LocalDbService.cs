@@ -17,6 +17,7 @@ namespace BudgetAppLibray {
 
             if (!defaultsAdded) {
                 // Add defaults to the database
+                // might want to rewrite this where we just ad each thing but use id so database not with a list
                 Profile d = new Profile { Name = "Empty" };
                 Profile d1 = new Profile { Name = "50 30 20 Rule" };
 
@@ -52,11 +53,24 @@ namespace BudgetAppLibray {
             return await _connection.Table<Profile>().ToListAsync();
         }
 
+        // should rename to save or add
         public async Task SaveProfile(Profile p) {
+            if (_connection.Table<Profile>().FirstOrDefaultAsync() == null) {
+                await AddProfile(p);
+            }
+
             await _connection.UpdateAsync(p);
         }
 
+        private async Task AddProfile(Profile p) {
+            await _connection.InsertAsync(p);
+        }
+
         public async Task SaveExpense(Expense e) {
+            if (_connection.Table<Expense>().FirstOrDefaultAsync() == null) {
+                await AddExpense(e);
+            }
+
             await _connection.UpdateAsync(e);
         }
 
@@ -68,22 +82,18 @@ namespace BudgetAppLibray {
             await _connection.InsertAsync(e);
         }
 
-        public async Task ClearEmptyProfile() {
-            Profile Empty = await _connection.Table<Profile>().Where(p => p.Name.Equals("Empty")).FirstAsync();
-
-            await _connection.Table<Expense>().Where(e => e.ProfileId == Empty.Id).DeleteAsync();
-        }
-
         public async Task DeleteProfile(Profile selected) {
             List<Expense> exp = await GetExpenses(selected);
 
             foreach (var x in exp)
             {
                 // Dont need to await bec we await to delete the profile so we cant access these expenses after
-                DeleteExpense(x);
+                await DeleteExpense(x);
             }            
 
             await _connection.DeleteAsync(selected);
         }
+
+        // PURGE DATABASE func add here
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DaMKf57A6JomUazCTSUtMU3XYkPx1YPmB6x2ISyPxrnucP6tLv38ieD7Vr4fCVHFO3DnbvtcFPxXv3k0Aau0wA==",
+  "dgSpecHash": "q6B/yeRAfsSAjN4LETC7Ono5edv6HzT3gyYNkx50AZW3YCA9Vt+XtEOfn0oPY6Zl5uv282o7IQvBckWf4uiN6g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj",
+  "projectFilePath": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maxwe\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\Maxwe\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

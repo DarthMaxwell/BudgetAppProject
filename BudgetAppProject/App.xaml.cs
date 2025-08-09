@@ -2,10 +2,16 @@
 
 namespace BudgetAppProject {
     public partial class App : Application {
-        public App(MainPage mainPage) {
+        public App() {
             InitializeComponent();
 
-            MainPage = mainPage;
+            bool auth = SecureStorage.GetAsync("isAuth").Result == "true";
+
+            if (auth) {
+                MainPage = new AppShell();
+            } else {
+                MainPage = new LoginShell();
+            }
         }
     }
 }

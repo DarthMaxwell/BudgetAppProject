@@ -3,40 +3,35 @@ using System.Collections;
 using System.Globalization;
 
 namespace BudgetAppLibray {
-    public class Libary {
-    }
+    public class Libary {}
 
     public class CustomSwitch1 : Switch {}
+
+    // Add Account class which need to refer to the profiles
 
     public class Profile {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; } = "New Profile";
 
         [Ignore]
-        public List<Expense> Expenses { get; set; } // THIS SEAMS TO JUST BE EMOTY
+        public List<Expense> Expenses { get; set; } // WE only use this for setting up the first items
 
-        public Profile() {
-            Expenses = new List<Expense>();
-        }
-
-        public override string ToString() {
-            return Name;
-        }
+        public Profile() {}
     }
     public class Expense {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public int ProfileId { get; set; }
-        public string Type { get; set; }
+        public string Type { get; set; } = "Static";
         public string ExpenseName { get; set; } = string.Empty;
-        public double Value { get; set; }
-        public bool Edit { get; set; } = false;
+        public double Value { get; set; } = 0;
+        public bool Edit { get; set; } = false; // need to remove this
 
-        public Expense() {
-            // New and editable
-            Type = "Static";
-            Edit = true;
+        public Expense() {}
+
+        public Expense(int ProfileId) {
+            this.ProfileId = ProfileId;
         }
 
         // if % sum cant be 100% need to check on input on new one

@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>com.companyname.budgetappproject</PackageIdentityName>
     <PackageIdentityPublisher>CN=Maxwe</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>96FFF86ABED4477E52D48BBD2D3F2B1AF04AF4D5CB7BFC2D33C5A1830518F9A8</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.budgetappproject_1.0.0.1_x64__ejrz37fg1bhp2</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.budgetappproject_ejrz37fg1bhp2!App</RegisteredUserModeAppID>
@@ -26,272 +26,272 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-30T20:31:53.126</Modified>
+      <Modified>2025-08-09T18:05:51.743</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-30T20:31:52.853</Modified>
+      <Modified>2025-08-09T17:52:56.135</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.runtimeconfig.json">
       <PackagePath>BudgetAppProject.runtimeconfig.json</PackagePath>
-      <Modified>2024-07-30T20:31:52.695</Modified>
+      <Modified>2025-08-09T15:42:26.803</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.dll">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.dll">
       <PackagePath>BudgetAppProject.dll</PackagePath>
-      <Modified>2024-07-30T20:31:51.700</Modified>
+      <Modified>2025-08-09T18:05:50.714</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppLibray\bin\Debug\net8.0-windows10.0.19041.0\BudgetAppLibray.dll">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppLibray\bin\Debug\net8.0-windows10.0.19041.0\BudgetAppLibray.dll">
       <PackagePath>BudgetAppLibray.dll</PackagePath>
-      <Modified>2024-07-30T20:31:45.718</Modified>
+      <Modified>2025-08-09T18:05:46.004</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>BudgetAppProject.exe</PackagePath>
-      <Modified>2024-07-30T20:31:51.744</Modified>
+      <Modified>2025-08-09T18:05:50.759</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2024-07-24T19:16:20.527</Modified>
+      <Modified>2025-08-09T11:17:10.128</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:19.560</Modified>
+      <Modified>2025-08-09T15:41:48.153</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:19.583</Modified>
+      <Modified>2025-08-09T15:41:48.167</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:19.611</Modified>
+      <Modified>2025-08-09T15:41:48.185</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:19.656</Modified>
+      <Modified>2025-08-09T15:41:48.215</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:19.793</Modified>
+      <Modified>2025-08-09T15:41:48.335</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-07-24T19:16:20.521</Modified>
+      <Modified>2025-08-09T11:17:10.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2024-07-24T19:16:20.522</Modified>
+      <Modified>2025-08-09T11:17:10.125</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-07-26T19:17:24.244</Modified>
+      <Modified>2025-08-09T15:41:52.338</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.875</Modified>
+      <Modified>2025-08-09T15:41:52.765</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.902</Modified>
+      <Modified>2025-08-09T15:41:52.789</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.923</Modified>
+      <Modified>2025-08-09T15:41:52.810</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.970</Modified>
+      <Modified>2025-08-09T15:41:52.841</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:25.116</Modified>
+      <Modified>2025-08-09T15:41:52.955</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.415</Modified>
+      <Modified>2025-08-09T15:41:52.459</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.420</Modified>
+      <Modified>2025-08-09T15:41:52.464</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.464</Modified>
+      <Modified>2025-08-09T15:41:52.487</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.442</Modified>
+      <Modified>2025-08-09T15:41:52.469</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.449</Modified>
+      <Modified>2025-08-09T15:41:52.475</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.378</Modified>
+      <Modified>2025-08-09T15:41:52.424</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.383</Modified>
+      <Modified>2025-08-09T15:41:52.430</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.410</Modified>
+      <Modified>2025-08-09T15:41:52.454</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.388</Modified>
+      <Modified>2025-08-09T15:41:52.435</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.398</Modified>
+      <Modified>2025-08-09T15:41:52.441</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.263</Modified>
+      <Modified>2025-08-09T15:41:52.351</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.269</Modified>
+      <Modified>2025-08-09T15:41:52.357</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.279</Modified>
+      <Modified>2025-08-09T15:41:52.364</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.289</Modified>
+      <Modified>2025-08-09T15:41:52.371</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.301</Modified>
+      <Modified>2025-08-09T15:41:52.381</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.306</Modified>
+      <Modified>2025-08-09T15:41:52.388</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.312</Modified>
+      <Modified>2025-08-09T15:41:52.393</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.343</Modified>
+      <Modified>2025-08-09T15:41:52.419</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.317</Modified>
+      <Modified>2025-08-09T15:41:52.399</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.324</Modified>
+      <Modified>2025-08-09T15:41:52.405</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.556</Modified>
+      <Modified>2025-08-09T15:41:52.570</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.566</Modified>
+      <Modified>2025-08-09T15:41:52.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.580</Modified>
+      <Modified>2025-08-09T15:41:52.590</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.675</Modified>
+      <Modified>2025-08-09T15:41:52.604</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.714</Modified>
+      <Modified>2025-08-09T15:41:52.633</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.511</Modified>
+      <Modified>2025-08-09T15:41:52.528</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.517</Modified>
+      <Modified>2025-08-09T15:41:52.534</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.524</Modified>
+      <Modified>2025-08-09T15:41:52.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.533</Modified>
+      <Modified>2025-08-09T15:41:52.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.547</Modified>
+      <Modified>2025-08-09T15:41:52.562</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.470</Modified>
+      <Modified>2025-08-09T15:41:52.494</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.476</Modified>
+      <Modified>2025-08-09T15:41:52.499</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.484</Modified>
+      <Modified>2025-08-09T15:41:52.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.492</Modified>
+      <Modified>2025-08-09T15:41:52.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.504</Modified>
+      <Modified>2025-08-09T15:41:52.522</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.726</Modified>
+      <Modified>2025-08-09T15:41:52.643</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.743</Modified>
+      <Modified>2025-08-09T15:41:52.656</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.766</Modified>
+      <Modified>2025-08-09T15:41:52.671</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.789</Modified>
+      <Modified>2025-08-09T15:41:52.693</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.856</Modified>
+      <Modified>2025-08-09T15:41:52.748</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.150</Modified>
+      <Modified>2025-08-09T15:41:52.330</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.158</Modified>
+      <Modified>2025-08-09T15:41:52.340</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.259</Modified>
+      <Modified>2025-08-09T15:41:52.352</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.285</Modified>
+      <Modified>2025-08-09T15:41:52.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-07-26T19:17:24.358</Modified>
+      <Modified>2025-08-09T15:41:52.443</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\App\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.deps.json">
+    <AppxPackagedFile Include="C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BudgetAppProject.deps.json">
       <PackagePath>BudgetAppProject.deps.json</PackagePath>
-      <Modified>2024-07-30T20:31:52.586</Modified>
+      <Modified>2025-08-09T15:42:26.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Maxwe\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

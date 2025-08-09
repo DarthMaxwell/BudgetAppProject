@@ -36476,11 +36476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppProject\\BudgetAppProject.csproj",
+      "projectUniqueName": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppProject\\BudgetAppProject.csproj",
       "projectName": "BudgetAppProject",
-      "projectPath": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppProject\\BudgetAppProject.csproj",
+      "projectPath": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppProject\\BudgetAppProject.csproj",
       "packagesPath": "C:\\Users\\Maxwe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppProject\\obj\\",
+      "outputPath": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppProject\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -36506,32 +36506,32 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android34.0",
           "projectReferences": {
-            "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj": {
-              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj"
+            "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj": {
+              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj"
             }
           }
         },
         "net8.0-ios17.2": {
           "targetAlias": "net8.0-ios",
           "projectReferences": {
-            "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj": {
-              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj"
+            "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj": {
+              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj"
             }
           }
         },
         "net8.0-maccatalyst17.2": {
           "targetAlias": "net8.0-maccatalyst",
           "projectReferences": {
-            "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj": {
-              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj"
+            "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj": {
+              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj"
             }
           }
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "projectReferences": {
-            "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj": {
-              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\App\\BudgetAppLibray\\BudgetAppLibray.csproj"
+            "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj": {
+              "projectPath": "C:\\Users\\Maxwe\\source\\repos\\BudgetAppProject\\BudgetAppLibray\\BudgetAppLibray.csproj"
             }
           }
         }

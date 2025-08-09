@@ -83,4 +83,19 @@
 	  <ProjectReference Include="..\BudgetAppLibray\BudgetAppLibray.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="LoginShell.xaml.cs">
+	    <DependentUpon>LoginShell.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="LoginShell.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

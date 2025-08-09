@@ -1,2 +1,2 @@
-C:\Users\Maxwe\source\repos\App\BudgetAppLibray\BudgetAppLibray.csproj;neutral
-C:\Users\Maxwe\source\repos\App\BudgetAppProject\BudgetAppProject.csproj;x64
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppLibray\BudgetAppLibray.csproj;neutral
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\BudgetAppProject.csproj;x64
