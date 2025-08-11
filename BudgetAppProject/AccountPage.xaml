@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetAppProject.AccountPage">
+    
+    <VerticalStackLayout x:Name="AccountStack" Margin="20,0" Spacing="10">
+        <Entry x:Name="IncomeEntry" Placeholder="Income" Text="{Binding Income}"/>
+        <Picker x:Name="TaxPicker" SelectedItem="{Binding TaxRate}"/>
+        <Button x:Name="SaveAccount" Text="Save" Clicked="SaveAccount_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
