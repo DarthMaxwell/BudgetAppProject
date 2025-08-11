@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BudgetAppProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f21af42f11b9ab343943eec284593f9b796b25c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+845ecd93a904f9fae70dfa92cda95fece14e7bff")]
 [assembly: System.Reflection.AssemblyProductAttribute("BudgetAppProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BudgetAppProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

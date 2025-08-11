@@ -234,7 +234,6 @@ C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-w
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
-C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Release.Net.dll
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
@@ -368,3 +367,16 @@ C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-w
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Management.Deployment.Projection.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.outputs
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microcharts.Maui.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.WinUI.Native.Projection.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Controls.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Maui.Core.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.Windows.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\libSkiaSharp.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.WinUI.Native.dll
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SkiaSharp.Views.WinUI.Native.winmd
+C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\.winmd_cache\$SkiaSharp.Views.WinUI.Native.winmd_638665814300000000.json

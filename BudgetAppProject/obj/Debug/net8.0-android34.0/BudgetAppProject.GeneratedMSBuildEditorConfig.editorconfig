@@ -15,6 +15,14 @@ build_property.RootNamespace = BudgetAppProject
 build_property.ProjectDir = C:\Users\Maxwe\source\repos\BudgetAppProject\BudgetAppProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Maxwe/source/repos/BudgetAppProject/BudgetAppProject/AccountPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BudgetAppProject.AccountPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AccountPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AccountPage.xaml
 
 [C:/Users/Maxwe/source/repos/BudgetAppProject/BudgetAppProject/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -27,18 +35,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BudgetAppProject.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
-
-[C:/Users/Maxwe/source/repos/BudgetAppProject/BudgetAppProject/LoginPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = BudgetAppProject.LoginPage.xaml
-build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
-build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
-
-[C:/Users/Maxwe/source/repos/BudgetAppProject/BudgetAppProject/LoginShell.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = BudgetAppProject.LoginShell.xaml
-build_metadata.AdditionalFiles.TargetPath = LoginShell.xaml
-build_metadata.AdditionalFiles.RelativePath = LoginShell.xaml
 
 [C:/Users/Maxwe/source/repos/BudgetAppProject/BudgetAppProject/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

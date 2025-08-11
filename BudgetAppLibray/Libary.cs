@@ -8,16 +8,37 @@ namespace BudgetAppLibray {
     public class CustomSwitch1 : Switch {}
 
     // Add Account class which need to refer to the profiles
+    public class  Account {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        public double Income { get; set; } = 0;
+        public double TaxRate { get; set; } = 0;
+
+        public Account() { }
+
+        public Account(double i, double t) {
+            Income = i;
+            TaxRate = t;
+        }
+    }
 
     public class Profile {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; } = "New Profile";
 
+        // need id of the account
+
         [Ignore]
         public List<Expense> Expenses { get; set; } // WE only use this for setting up the first items
 
-        public Profile() {}
+        public Profile() {
+            Expenses = new List<Expense>();
+        }
+
+        public override string ToString() {
+            return Name;
+        }
     }
     public class Expense {
         [PrimaryKey, AutoIncrement]
@@ -47,6 +68,7 @@ namespace BudgetAppLibray {
         }
     }
 
+    // Can remove some of the converts that arnt used rn
 
     public class Text2BoolSwitchConverter : IValueConverter {
         public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
