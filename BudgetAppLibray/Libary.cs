@@ -1,5 +1,5 @@
 ﻿using SQLite;
-using System.Collections;
+using System.Collections.ObjectModel;
 using System.Globalization;
 
 namespace BudgetAppLibray {
@@ -30,10 +30,10 @@ namespace BudgetAppLibray {
         // need id of the account
 
         [Ignore]
-        public List<Expense> Expenses { get; set; } // WE only use this for setting up the first items
+        public ObservableCollection<Expense> Expenses { get; set; }
 
         public Profile() {
-            Expenses = new List<Expense>();
+            Expenses = new ObservableCollection<Expense>();
         }
 
         public override string ToString() {
@@ -65,6 +65,10 @@ namespace BudgetAppLibray {
         public DisplayExpense(string name, double value) {
             Name = name;
             Value = value;
+        }
+
+        public override string ToString() {
+            return Name + " - " + Value;
         }
     }
 

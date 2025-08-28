@@ -6,7 +6,6 @@ namespace BudgetAppLibray {
     public class ExpensesViewModel : INotifyPropertyChanged {
         private readonly LocalDbService _dbService;
         public ObservableCollection<Profile> Profiles { get; set; } = new();
-        public ObservableCollection<Expense> Expenses { get; set; } = new();
 
         private Profile selectedProfile;
         public Profile SelectedProfile {
@@ -15,44 +14,21 @@ namespace BudgetAppLibray {
                 if (selectedProfile != value) {
                     selectedProfile = value;
                     OnPropertyChanged();
-                    LoadExpensesForProfile(selectedProfile);
                 }
             }
         }
 
         public ExpensesViewModel(LocalDbService dbService) {
             _dbService = dbService;
-            //LoadProfiles();
         }
 
-        public async Task InitAsync() {
-            var profilesFromDb = await _dbService.GetProfiles();
+        public void Init() {
+            var profilesFromDb = _dbService.GetProfilesAndExpenses();
             Profiles.Clear();
             foreach (var profile in profilesFromDb)
                 Profiles.Add(profile);
 
             SelectedProfile = Profiles.First();
-            SelectedProfile = Profiles.First();
-        }
-
-        private async void LoadProfiles() {
-            var profilesFromDb = await _dbService.GetProfiles();
-            Profiles.Clear();
-            foreach (var profile in profilesFromDb)
-                Profiles.Add(profile);
-        }
-
-        private async void LoadExpensesForProfile(Profile profile) {
-            if (profile == null) {
-                Expenses.Clear();
-                return;
-            }
-
-            var expensesFromDb = await _dbService.GetExpenses(profile);
-
-            Expenses.Clear();
-            foreach (var expense in expensesFromDb)
-                Expenses.Add(expense);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

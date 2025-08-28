@@ -3,13 +3,9 @@ using System.Collections;
 using System.Threading.Tasks;
 
 namespace BudgetAppLibray {
-    public class LocalDbService { //NEEDS a clean up
+    public class LocalDbService {
         private const string DB_NAME = "profile_local_db.db3";
         private readonly SQLiteAsyncConnection _connection;
-
-
-        //Everything looks to behind maybe i can load the profile and expenses all at once from the libary for the dbservice idk
-
 
         public LocalDbService() {
             _connection = new SQLiteAsyncConnection(Path.Combine(FileSystem.AppDataDirectory, DB_NAME));
@@ -25,8 +21,15 @@ namespace BudgetAppLibray {
             _connection.CreateTableAsync<Account>().Wait();
         }
 
-        public async Task GetProfileAndExpense(Profile p) {
-            return null;
+        public List<Profile> GetProfilesAndExpenses() {
+            List<Profile> profiles = _connection.Table<Profile>().ToListAsync().Result;
+
+            foreach (Profile p in profiles) {
+                var expenses = _connection.Table<Expense>().Where(e => e.ProfileId == p.Id).ToListAsync().Result;
+                expenses.ForEach(e => p.Expenses.Add(e));
+            }
+
+            return profiles;
         }
 
         public async Task AddDefaultObjectsIfNeededAsync() {
@@ -45,7 +48,7 @@ namespace BudgetAppLibray {
                 d.Expenses.Add(e2);
                 d.Expenses.Add(e3);
 
-                await AddAccount(new Account(10000, 24));
+                await AddAccount(new Account(30000, 24));
                 await InsertProfileWithExpensesAsync(d);
 
                 Preferences.Set("DefaultsAdded", true);
@@ -75,20 +78,19 @@ namespace BudgetAppLibray {
 
         // should rename to save or add
         public async Task SaveProfile(Profile p) {
-            if (p.Id == 0) { //new Profile dosnt have auto inc yet
-                //await addProfile(p);
+            if (p.Id == 0) { // new Profile will have id 0
                 await InsertProfileWithExpensesAsync(p);
             } else {
                 await _connection.UpdateAsync(p);
+
+                foreach (var e in p.Expenses) {
+                    await SaveExpense(e);
+                }
             }
         }
 
-        public async Task AddProfile(Profile p) {
-            await _connection.InsertAsync(p);
-        }
-
         public async Task SaveExpense(Expense e) {
-            if (e.Id == 0) { //new Expense dosnt have auto inc yet
+            if (e.Id == 0) { //new Expense will have id 0
                 await AddExpense(e);
             } else {  
                 await _connection.UpdateAsync(e);
@@ -106,9 +108,7 @@ namespace BudgetAppLibray {
         public async Task DeleteProfile(Profile selected) {
             List<Expense> exp = await GetExpenses(selected);
 
-            foreach (var x in exp)
-            {
-                // Dont need to await bec we await to delete the profile so we cant access these expenses after
+            foreach (var x in exp) {
                 await DeleteExpense(x);
             }            
 

@@ -29,13 +29,12 @@
                          VerticalOptions="Center"
                          HorizontalOptions="Center"/>
 
-            <CollectionView x:Name="DisplayExpenses" ItemsLayout="VerticalList" >
+            <CollectionView x:Name="DisplayExpenses" ItemsLayout="VerticalList">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame>
                             <HorizontalStackLayout Spacing="10">
-                                <Label Text="{Binding Name}"/>
-                                <Label Text="{Binding Value}"/>
+                                <Label Text="{Binding .}"/>
                             </HorizontalStackLayout>
                         </Frame>
                     </DataTemplate>
@@ -45,7 +44,7 @@
             <!--These should be hidden until hit the edit button-->
             <Entry x:Name="ProfileNameEntry" IsVisible="False" Text="{Binding SelectedProfile}"/>
 
-            <CollectionView x:Name="Expenses" ItemsLayout="VerticalList" IsVisible="False" ItemsSource="{Binding Expenses}">
+            <CollectionView x:Name="Expenses" ItemsLayout="VerticalList" IsVisible="False" ItemsSource="{Binding SelectedProfile.Expenses}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame>
@@ -65,7 +64,7 @@
 
             <!--Need a cancle button-->
             <Button x:Name="AddExpenseButton" Text="Add Expense" Clicked="AddExpenseButton_Clicked" IsVisible="False"/>
-            <Button x:Name="RemoveProfileButton" Clicked="RemoveProfileButton_Clicked" IsVisible="False" Text="Remove"/>
+            <Button x:Name="RemoveProfileButton" Clicked="RemoveProfileButton_Clicked" IsVisible="False" Text="Remove Profile"/>
             <Button x:Name="SaveProfileButton" IsVisible="False" Clicked="SaveProfileButton_Clicked" Text="Save"/>
             <Button x:Name="CancelButton" IsVisible="False" Clicked="CancelButton_Clicked" Text="Cancel"/>
             
