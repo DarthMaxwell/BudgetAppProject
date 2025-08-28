@@ -22,7 +22,17 @@ namespace BudgetAppLibray {
 
         public ExpensesViewModel(LocalDbService dbService) {
             _dbService = dbService;
-            LoadProfiles();
+            //LoadProfiles();
+        }
+
+        public async Task InitAsync() {
+            var profilesFromDb = await _dbService.GetProfiles();
+            Profiles.Clear();
+            foreach (var profile in profilesFromDb)
+                Profiles.Add(profile);
+
+            SelectedProfile = Profiles.First();
+            SelectedProfile = Profiles.First();
         }
 
         private async void LoadProfiles() {

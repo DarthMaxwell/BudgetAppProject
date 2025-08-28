@@ -7,6 +7,10 @@ namespace BudgetAppLibray {
         private const string DB_NAME = "profile_local_db.db3";
         private readonly SQLiteAsyncConnection _connection;
 
+
+        //Everything looks to behind maybe i can load the profile and expenses all at once from the libary for the dbservice idk
+
+
         public LocalDbService() {
             _connection = new SQLiteAsyncConnection(Path.Combine(FileSystem.AppDataDirectory, DB_NAME));
 
@@ -19,6 +23,10 @@ namespace BudgetAppLibray {
             _connection.CreateTableAsync<Profile>().Wait();
             _connection.CreateTableAsync<Expense>().Wait();
             _connection.CreateTableAsync<Account>().Wait();
+        }
+
+        public async Task GetProfileAndExpense(Profile p) {
+            return null;
         }
 
         public async Task AddDefaultObjectsIfNeededAsync() {

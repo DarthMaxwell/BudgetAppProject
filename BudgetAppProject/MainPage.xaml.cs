@@ -4,16 +4,8 @@ using SkiaSharp;
 
 namespace BudgetAppProject {
     public partial class MainPage : ContentPage {
-        public ExpensesViewModel ViewModel { get; set; }
-        private readonly LocalDbService _dbService;
-
-        //private Accout account = somthing
-        ExpensesViewModel viewModel;
-
-
-        // this will be removed or come for the profile
-        private double IncomeAfterTax = 0;
-        private List<DisplayExpense> displayExpenses = new List<DisplayExpense>(); //move thbis??
+        private readonly LocalDbService Db = App.Db;
+        private readonly ExpensesViewModel PEViewModel = App.MainProfileAndExpenseViewModel;
 
         List<SKColor> donutChartColors = new List<SKColor>{
             SKColor.Parse("#FF6384"), // Soft Red
@@ -28,28 +20,26 @@ namespace BudgetAppProject {
             SKColor.Parse("#E74C3C")  // Crimson
         };
 
-        public MainPage(LocalDbService dbService) {
+        public MainPage(LocalDbService dbService) { // idk how we get this in the construtor but we can remvoe it
             InitializeComponent();
-            _dbService = dbService;
 
-            viewModel = new ExpensesViewModel(_dbService);
-            BindingContext = viewModel;
-            // Want to select the first one or just anything
+            //_dbService.AddDefaultObjectsIfNeededAsync(); still needed justy commnedt out
 
-            InitializeAsync();
+            BindingContext = PEViewModel;
         }
 
         protected override void OnDisappearing() {
             base.OnDisappearing();
 
             CancelButton_Clicked(null, null);
+            // Gets run when its minimized so maybe not what we want
         }
 
+        // Onappear refresh incace the account was updated
 
-        [Obsolete]
-        private async Task InitializeAsync() {
-            await _dbService.AddDefaultObjectsIfNeededAsync();
-        }
+        // Events
+
+        // Helper Functions
 
         private void ProfilePicker_SelectedIndexChanged(object sender, EventArgs e) {
             refreshMoneyAfterIncomeAndTax();
@@ -73,43 +63,41 @@ namespace BudgetAppProject {
             Button button = (Button)sender;
             Expense exp = (Expense)button.Parent.BindingContext;
 
-            viewModel.Expenses.Remove(exp);
+            PEViewModel.Expenses.Remove(exp);
         }
 
         private void AddExpenseButton_Clicked(object sender, EventArgs e) {
-            Expense newExpense = new Expense(viewModel.SelectedProfile.Id);
+            Expense newExpense = new Expense(PEViewModel.SelectedProfile.Id);
 
-            viewModel.Expenses.Add(newExpense);
+            PEViewModel.Expenses.Add(newExpense);
         }
 
         private async void refreshMoneyAfterIncomeAndTax() {
+            List<DisplayExpense> TempExpensesList = new List<DisplayExpense>();
+            Account a = await Db.GetAccount();
+
             DisplayExpenses.ItemsSource = null;
-            displayExpenses.Clear();
 
-            Account a = await _dbService.GetAccount();
-
-            // Want to be able to use , or . for decimals
-            
             double Tax = a.TaxRate;
             double Income = a.Income;
-            IncomeAfterTax = Income - (Income * (Tax / 100));
+            double IncomeAfterTax = Income - (Income * (Tax / 100));
             double extra = IncomeAfterTax;
 
-            if (viewModel.SelectedProfile != null ) {
-                displayExpenses.Add(new DisplayExpense("Tax", Math.Round(Income * (Tax / 100), 2)));
+            if (PEViewModel.SelectedProfile != null ) { // will it ever be null bassicly no
+                TempExpensesList.Add(new DisplayExpense("Tax", Math.Round(Income * (Tax / 100), 2)));
 
-                foreach (Expense e in viewModel.Expenses) {
+                foreach (Expense e in PEViewModel.Expenses) {
                     double x = (e.Type == "Percent") ? IncomeAfterTax * (e.Value / 100) : e.Value;
 
-                    displayExpenses.Add(new DisplayExpense(e.ExpenseName, Math.Round(x, 2)));
+                    TempExpensesList.Add(new DisplayExpense(e.ExpenseName, Math.Round(x, 2)));
                     extra -= Math.Round(x, 2);
                 }
 
                 if (extra > 1) {
-                   displayExpenses.Add(new DisplayExpense("Extra", Math.Round(extra, 2)));
+                   TempExpensesList.Add(new DisplayExpense("Extra", Math.Round(extra, 2)));
                 }
 
-                DisplayExpenses.ItemsSource = displayExpenses;
+                DisplayExpenses.ItemsSource = TempExpensesList;
             }
             
 
@@ -119,7 +107,7 @@ namespace BudgetAppProject {
             // just for normal for loop later
             int index = 0;
 
-            foreach (var x in displayExpenses) {
+            foreach (var x in TempExpensesList) {
                 chartEntries.Add(new ChartEntry((float?)x.Value) { Color = donutChartColors[index] });
                 index++;
             }
@@ -129,34 +117,37 @@ namespace BudgetAppProject {
         }
 
         private async void RemoveProfileButton_Clicked(object sender, EventArgs e) {
-            await _dbService.DeleteProfile(viewModel.SelectedProfile);
-            viewModel.Profiles.Remove(viewModel.SelectedProfile);
+            await Db.DeleteProfile(PEViewModel.SelectedProfile);
+            PEViewModel.Profiles.Remove(PEViewModel.SelectedProfile);
 
             exitEditMode();
-            // maybe select the first profile?
         }
 
         private async void SaveProfileButton_Clicked(object sender, EventArgs e) {
+            Profile EditedProfile = PEViewModel.SelectedProfile;
             // needs to check if valid and then save to db (will be in a bunch of different things)
 
             //NEEds to remove the expenses related to the new profile
 
             // Update Profile's Expesnses in database
-            foreach (var exp in viewModel.Expenses) {
-                viewModel.SelectedProfile.Expenses.Add(exp);
+            foreach (var exp in PEViewModel.Expenses) {
+                PEViewModel.SelectedProfile.Expenses.Add(exp);
             }
 
             // Update Profile name in database
-            if (ProfileNameEntry.Text != "" && !ProfileNameEntry.Text.Equals(viewModel.SelectedProfile.Name)) {
-                viewModel.SelectedProfile.Name = ProfileNameEntry.Text;
-                await _dbService.SaveProfile(viewModel.SelectedProfile);
+            if (ProfileNameEntry.Text != "" && !ProfileNameEntry.Text.Equals(PEViewModel.SelectedProfile.Name)) {
+                PEViewModel.SelectedProfile.Name = ProfileNameEntry.Text;
+                await Db.SaveProfile(PEViewModel.SelectedProfile);
+                EditedProfile = PEViewModel.SelectedProfile;
             }
 
             // Update the View
-            var profilesFromDb = await _dbService.GetProfiles();
-            viewModel.Profiles.Clear();
+            var profilesFromDb = await Db.GetProfiles();
+            PEViewModel.Profiles.Clear();
             foreach (var profile in profilesFromDb)
-                viewModel.Profiles.Add(profile);
+                PEViewModel.Profiles.Add(profile);
+
+            PEViewModel.SelectedProfile = PEViewModel.Profiles.FirstOrDefault(p => p.Id == EditedProfile.Id);
 
             // Will need to use a name or something like index the newest on in the list
             //viewModel.SelectedProfile = profilesFromDb.FirstOrDefault(p => p.Nam == viewModel.SelectedProfile.Id);
@@ -179,17 +170,17 @@ namespace BudgetAppProject {
             ProfilePicker.IsVisible = true;
         }
 
-        private void AddButtonProfile_Clicked(object sender, EventArgs e) {
+        private void AddButtonProfile_Clicked(object sender, EventArgs e) { // not working fucks the names up??
             Profile newProfile = new Profile();
-            viewModel.Profiles.Add(newProfile);
-            viewModel.SelectedProfile = newProfile;
+            PEViewModel.Profiles.Add(newProfile);
+            PEViewModel.SelectedProfile = newProfile;
 
             EditButton_Clicked(sender, e);
         }
 
         private void CancelButton_Clicked(object sender, EventArgs e) {
-            if (viewModel.SelectedProfile.Id == 0) { // 0 id means its new and not in the database yet
-                viewModel.Profiles.Remove(viewModel.SelectedProfile);
+            if (PEViewModel.SelectedProfile.Id == 0) { // 0 id means its new and not in the database yet
+                PEViewModel.Profiles.Remove(PEViewModel.SelectedProfile);
             }
 
             exitEditMode();

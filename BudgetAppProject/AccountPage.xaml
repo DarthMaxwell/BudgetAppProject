@@ -4,8 +4,8 @@
              x:Class="BudgetAppProject.AccountPage">
     
     <VerticalStackLayout x:Name="AccountStack" Margin="20,0" Spacing="10">
-        <Entry x:Name="IncomeEntry" Placeholder="Income" Text="{Binding Income}"/>
-        <Picker x:Name="TaxPicker" SelectedItem="{Binding TaxRate}"/>
-        <Button x:Name="SaveAccount" Text="Save" Clicked="SaveAccount_Clicked"/>
+        <Entry x:Name="IncomeEntry" Placeholder="Income" Text="{Binding Income}" TextChanged="IncomeEntry_TextChanged"/>
+        <Picker x:Name="TaxPicker" SelectedItem="{Binding TaxRate}" SelectedIndexChanged="TaxPicker_SelectedIndexChanged"/>
+        <Button x:Name="SaveAccount" Text="Save" Clicked="SaveAccount_Clicked" IsVisible="False"/>
     </VerticalStackLayout>
 </ContentPage>
