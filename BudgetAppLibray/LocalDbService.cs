@@ -1,6 +1,4 @@
 ﻿using SQLite;
-using System.Collections;
-using System.Threading.Tasks;
 
 namespace BudgetAppLibray {
     public class LocalDbService {

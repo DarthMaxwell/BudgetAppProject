@@ -13,9 +13,14 @@ namespace BudgetAppProject {
             Db = new LocalDbService();
             MainProfileAndExpenseViewModel = new ExpensesViewModel(Db);
 
-            MainProfileAndExpenseViewModel.Init();
+            _ = InitAsync();
 
             MainPage = new AppShell();
+        }
+
+        private async Task InitAsync() {
+            await Db.AddDefaultObjectsIfNeededAsync();
+            MainProfileAndExpenseViewModel.Init();
         }
     }
 }

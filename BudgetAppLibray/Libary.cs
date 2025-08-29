@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using SkiaSharp;
+using SQLite;
 using System.Collections.ObjectModel;
 using System.Globalization;
 
@@ -30,11 +31,9 @@ namespace BudgetAppLibray {
         // need id of the account
 
         [Ignore]
-        public ObservableCollection<Expense> Expenses { get; set; }
+        public ObservableCollection<Expense> Expenses { get; set; } = new ObservableCollection<Expense>();
 
-        public Profile() {
-            Expenses = new ObservableCollection<Expense>();
-        }
+        public Profile() {}
 
         public override string ToString() {
             return Name;
@@ -62,13 +61,19 @@ namespace BudgetAppLibray {
         public string Name { get; set; }
         public double Value { get; set; }
 
-        public DisplayExpense(string name, double value) {
+        public Color DisplayColor { get; set; }
+        public double Percentage { get; set; }
+        public string PercentageText => $"{Percentage}%";
+
+        public DisplayExpense(string name, double value, SKColor color, double percentage) {
             Name = name;
             Value = value;
+            DisplayColor = Color.FromRgb(color.Red, color.Green, color.Blue);
+            Percentage = percentage;
         }
 
         public override string ToString() {
-            return Name + " - " + Value;
+            return $"{Name} : {Value:N2}";
         }
     }
 

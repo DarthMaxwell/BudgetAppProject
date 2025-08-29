@@ -4,7 +4,9 @@
              x:Class="BudgetAppProject.AccountPage">
     
     <VerticalStackLayout x:Name="AccountStack" Margin="20,0" Spacing="10">
+        <Label Text="Income" Margin="0,10,0,0"/>
         <Entry x:Name="IncomeEntry" Placeholder="Income" Text="{Binding Income}" TextChanged="IncomeEntry_TextChanged"/>
+        <Label Text="Tax Percentage"/>
         <Picker x:Name="TaxPicker" SelectedItem="{Binding TaxRate}" SelectedIndexChanged="TaxPicker_SelectedIndexChanged"/>
         <Button x:Name="SaveAccount" Text="Save" Clicked="SaveAccount_Clicked" IsVisible="False"/>
     </VerticalStackLayout>

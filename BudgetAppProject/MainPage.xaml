@@ -6,10 +6,10 @@
     x:Class="BudgetAppProject.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout Margin="20,0" Spacing="25">
-
-            <HorizontalStackLayout>
+        <VerticalStackLayout Margin="10,0" Spacing="25">
+            <Grid ColumnDefinitions="*,Auto,Auto" Margin="0,5,0,0">
                 <Picker
+                    Grid.Column="0"
                     Margin="0,0,10,0"
                     ItemsSource="{Binding Profiles}"
                     ItemDisplayBinding="{Binding Name}"
@@ -17,26 +17,39 @@
                     x:Name="ProfilePicker"
                     SelectedIndexChanged="ProfilePicker_SelectedIndexChanged"/>
 
-                <Button x:Name="EditButton" Clicked="EditButton_Clicked" Text="Edit"/>
-                <Button x:Name="AddButtonProfile" Clicked="AddButtonProfile_Clicked" Text="Add profile"/>
-                <!--<ImageButton x:Name="AddButtonProfile" Clicked="AddButtonProfile_Clicked" Source="dotnet_bot.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="60"/>-->
-            </HorizontalStackLayout>
+                
+                <Button 
+                    Grid.Column="1"
+                    x:Name="EditButton" 
+                    Clicked="EditButton_Clicked" 
+                    Text="Edit" 
+                    Margin="0,0,5,0"/>
 
-            <!--Need to make dynamic-->
+                <Button 
+                    Grid.Column="2"
+                    x:Name="AddButtonProfile" 
+                    Clicked="AddButtonProfile_Clicked" 
+                    Text="New Profile"/>
+            </Grid>
+
             <micro:ChartView x:Name="ExpenseChart"
-                         HeightRequest="500"
-                         WidthRequest="500"
                          VerticalOptions="Center"
                          HorizontalOptions="Center"/>
 
-            <CollectionView x:Name="DisplayExpenses" ItemsLayout="VerticalList">
+            <CollectionView x:Name="DisplayExpenses">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="5" />
+                </CollectionView.ItemsLayout>
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame>
-                            <HorizontalStackLayout Spacing="10">
-                                <Label Text="{Binding .}"/>
-                            </HorizontalStackLayout>
-                        </Frame>
+                        <Border Padding="10" Margin="0,0,0,10">
+                            <Grid ColumnDefinitions="Auto, *, Auto">
+                                <BoxView Grid.Column="0" WidthRequest="20" HeightRequest="20" Color="{Binding DisplayColor}" VerticalOptions="Center" Margin="0,0,5,0"/>
+                                <Label Grid.Column="1" Text="{Binding .}" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                <Label Grid.Column="2" Text="{Binding PercentageText}" VerticalOptions="Center" HorizontalOptions="End"/>
+                            </Grid>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

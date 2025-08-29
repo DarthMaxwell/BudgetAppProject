@@ -1,6 +1,7 @@
-﻿using Microcharts.Maui;
-using BudgetAppLibray;
+﻿using BudgetAppLibray;
+using Microcharts.Maui;
 using Microsoft.Extensions.Logging;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace BudgetAppProject {
     public static class MauiProgram {
@@ -8,6 +9,7 @@ namespace BudgetAppProject {
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp()
                 .UseMicrocharts()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

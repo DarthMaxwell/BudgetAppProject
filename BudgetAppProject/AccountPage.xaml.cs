@@ -12,8 +12,13 @@ public partial class AccountPage : ContentPage
 		InitializeComponent();
         LoadAccount();
 
-        double[] taxPercentage = [.. Enumerable.Range(0, 100)];
+        double[] taxPercentage = [.. Enumerable.Range(0, 101)];
         TaxPicker.ItemsSource = taxPercentage;
+    }
+
+    protected override void OnDisappearing() {
+        base.OnDisappearing();
+        LoadAccount();
     }
 
     // Event Functions
@@ -21,7 +26,7 @@ public partial class AccountPage : ContentPage
 
 
         if (isValidIncome(sender)) {
-            IncomeEntry.TextColor = Colors.Black;
+            IncomeEntry.TextColor = Colors.Black; // not set to defualt color so dark mode breaks
 
             // this is cleaner but idk if it uses more by constanty chainging the attribute
             // SaveAccount.IsVisible = CheckIncomeAndTaxChange()
@@ -47,6 +52,7 @@ public partial class AccountPage : ContentPage
 
     private async void SaveAccount_Clicked(object sender, EventArgs e) {
         await Db.SaveAccount((Account)AccountStack.BindingContext);
+        LoadAccount();
         SaveAccount.IsVisible = false;
     }
 

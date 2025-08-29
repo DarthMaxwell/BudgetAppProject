@@ -20,10 +20,8 @@ namespace BudgetAppProject {
             SKColor.Parse("#E74C3C")  // Crimson
         };
 
-        public MainPage(LocalDbService dbService) { // idk how we get this in the construtor but we can remvoe it
+        public MainPage() {
             InitializeComponent();
-
-            _ = Db.AddDefaultObjectsIfNeededAsync();
 
             BindingContext = PEViewModel;
         }
@@ -38,7 +36,28 @@ namespace BudgetAppProject {
         protected override void OnAppearing() {
             base.OnAppearing();
 
-            RefreshMoney();
+            var defaultsAdded = Preferences.Get("DefaultsAdded", false);
+
+            if (defaultsAdded) {
+                RefreshMoney();
+            }
+        }
+
+        protected override void OnSizeAllocated(double width, double height) {
+            base.OnSizeAllocated(width, height);
+
+            // Make donut chart scale with screen size
+            if (ExpenseChart != null) {
+                // Only use half the height
+                var availableHeight = height / 2;
+
+                // Take smaller dimension so chart stays square
+                var size = Math.Min(width, availableHeight) - 40;
+                if (size < 0) size = 0;
+
+                ExpenseChart.WidthRequest = size;
+                ExpenseChart.HeightRequest = size;
+            }
         }
 
         // Events
@@ -136,35 +155,40 @@ namespace BudgetAppProject {
 
         // Helper Functions
         private async void RefreshMoney() {
+            // Percentage can have little rounding error too much or too little
             List<DisplayExpense> TempExpensesList = new List<DisplayExpense>();
+            List<ChartEntry> chartEntries = new List<ChartEntry>();
+
             Account a = await Db.GetAccount();
-            double IncomeAfterTax = a.Income - (a.Income * (a.TaxRate / 100));
+
+            int colorIndex = 0;
+
+            double IncomeAfterTax = Math.Round(a.Income - (a.Income * (a.TaxRate / 100.0)), 2);
+            double tax = Math.Round(a.Income - IncomeAfterTax, 2);
             double extra = IncomeAfterTax;
 
-            TempExpensesList.Add(new DisplayExpense("Tax", Math.Round(a.Income - IncomeAfterTax, 2)));
-
-            foreach (Expense e in PEViewModel.SelectedProfile.Expenses) {
-                double x = (e.Type == "Percent") ? IncomeAfterTax * (e.Value / 100) : e.Value; // could round here
-
-                TempExpensesList.Add(new DisplayExpense(e.ExpenseName, Math.Round(x, 2)));
-                extra -= Math.Round(x, 2);
+            if (tax > 0) {
+                TempExpensesList.Add(new DisplayExpense("Tax", tax, donutChartColors[colorIndex], a.TaxRate));
+                chartEntries.Add(new ChartEntry((float?)tax) { Color = donutChartColors[colorIndex++]});
             }
 
-            if (extra > 1) {
-               TempExpensesList.Add(new DisplayExpense("Extra", Math.Round(extra, 2)));
+            foreach (Expense e in PEViewModel.SelectedProfile.Expenses) {
+                double x = (e.Type == "Percent") ? IncomeAfterTax * (e.Value / 100.0) : e.Value;
+                double xper = (e.Type == "Percent") ? Math.Round((x / a.Income) * 100, 2) : Math.Round((e.Value / a.Income) * 100, 2);
+
+                TempExpensesList.Add(new DisplayExpense(e.ExpenseName, x, donutChartColors[colorIndex], xper));
+                chartEntries.Add(new ChartEntry((float?)x) { Color = donutChartColors[colorIndex++]});
+
+                extra -= x;
+            }
+
+            if (extra > 0) {
+               TempExpensesList.Add(new DisplayExpense("Extra", extra, donutChartColors[colorIndex], Math.Round((extra / a.Income) * 100, 2)));
+                chartEntries.Add(new ChartEntry((float?)extra) { Color = donutChartColors[colorIndex]});
             }
 
             DisplayExpenses.ItemsSource = null;
             DisplayExpenses.ItemsSource = TempExpensesList;
-            
-
-            // Donut chart
-            List<ChartEntry> chartEntries = new List<ChartEntry>();
-
-            for (int i = 0; i < TempExpensesList.Count; i++) {
-                chartEntries.Add(new ChartEntry((float?)TempExpensesList[i].Value) { Color = donutChartColors[i] });
-            }
-
             ExpenseChart.Chart = new DonutChart { Entries = chartEntries };
         }
 
