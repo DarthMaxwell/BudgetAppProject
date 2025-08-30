@@ -38,9 +38,9 @@ namespace BudgetAppLibray {
                 // might want to rewrite this where we just ad each thing but use id so database not with a list
                 Profile d = new Profile { Name = "50 30 20 Rule" };
 
-                Expense e1 = new Expense { Type = "Percent", ExpenseName = "Needs", Value = 50 };
-                Expense e2 = new Expense { Type = "Percent", ExpenseName = "Wants", Value = 30 };
-                Expense e3 = new Expense { Type = "Percent", ExpenseName = "Savings", Value = 20 };
+                Expense e1 = new Expense { isPercentage = true, ExpenseName = "Needs", Value = 50 };
+                Expense e2 = new Expense { isPercentage = true, ExpenseName = "Wants", Value = 30 };
+                Expense e3 = new Expense { isPercentage = true, ExpenseName = "Savings", Value = 20 };
 
                 d.Expenses.Add(e1);
                 d.Expenses.Add(e2);

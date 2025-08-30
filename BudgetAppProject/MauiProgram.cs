@@ -19,7 +19,7 @@ namespace BudgetAppProject {
             builder.Services.AddSingleton<LocalDbService>();
             builder.Services.AddTransient<MainPage>();
 
-#if WINDOWS // GOnna need this for all the other platforms too
+#if WINDOWS // Remove this
             Microsoft.Maui.Handlers.SwitchHandler.Mapper.AppendToMapping("NoLabel", (handler, view) => {
                 if (view is BudgetAppLibray.CustomSwitch1) {
                     handler.PlatformView.OnContent = "Percent";

@@ -1,7 +1,9 @@
 ﻿using SkiaSharp;
 using SQLite;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace BudgetAppLibray {
     public class Libary {}
@@ -39,13 +41,35 @@ namespace BudgetAppLibray {
             return Name;
         }
     }
-    public class Expense {
+
+
+    public class Expense : INotifyPropertyChanged {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public int ProfileId { get; set; }
-        public string Type { get; set; } = "Static";
-        public string ExpenseName { get; set; } = string.Empty;
-        public double Value { get; set; } = 0;
+
+        private bool _isPercentage;
+        public bool isPercentage {
+            get => _isPercentage;
+            set {
+                if (_isPercentage != value) {
+                    _isPercentage = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private string _expenseName;
+        public string ExpenseName {
+            get => _expenseName;
+            set { _expenseName = value; OnPropertyChanged(); }
+        }
+
+        private double _value;
+        public double Value {
+            get => _value;
+            set { _value = value; OnPropertyChanged(); }
+        }
         public bool Edit { get; set; } = false; // need to remove this
 
         public Expense() {}
@@ -53,6 +77,10 @@ namespace BudgetAppLibray {
         public Expense(int ProfileId) {
             this.ProfileId = ProfileId;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         // if % sum cant be 100% need to check on input on new one
     }
@@ -77,56 +105,14 @@ namespace BudgetAppLibray {
         }
     }
 
-    // Can remove some of the converts that arnt used rn
-
-    public class Text2BoolSwitchConverter : IValueConverter {
-        public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
-            if (value is string text) {
-                switch (text) {
-                    case "Static":
-                        return false;
-                    case "Percent":
-                        return true;
-                }
-            }
-
-            return null;
+    public class BoolToTextConverter : IValueConverter {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
+            return (value is bool b && b) ? "Percent" : "Static";
         }
 
-        public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
-            if (value is bool b) {
-                switch (b) {
-                    case false:
-                        return "Static";
-                    case true:
-                        return "Percent";
-                }
-            }
-
-            return null;
-        }
-    }
-    
-    public class Bool2TextButtonConverter : IValueConverter {
-        public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
-            if (value is bool b) {
-                return (b) ? "Save" : "Edit";
-            }
-
-            return null;
-        }
-
-        public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
-            if (value is string text) {
-                switch (text) {
-                    case "Save":
-                        return false;
-                    case "Edit":
-                        return true;
-                }
-            }
-
-            return null;
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
+            // Not really needed
+            return value?.ToString() == "Percent";
         }
     }
 }

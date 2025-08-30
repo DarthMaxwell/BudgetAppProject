@@ -57,20 +57,26 @@
             <!--These should be hidden until hit the edit button-->
             <Entry x:Name="ProfileNameEntry" IsVisible="False" Text="{Binding SelectedProfile}"/>
 
-            <CollectionView x:Name="Expenses" ItemsLayout="VerticalList" IsVisible="False" ItemsSource="{Binding SelectedProfile.Expenses}">
+            <CollectionView x:Name="Expenses" IsVisible="False" ItemsSource="{Binding SelectedProfile.Expenses}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame>
-                            <HorizontalStackLayout>
-                                <local:CustomSwitch1 IsToggled="{Binding Type, Converter={local:Text2BoolSwitchConverter}}"/>
+                        <Border>
+                            <Grid ColumnDefinitions="Auto, Auto, Auto, *, Auto" Padding="5">
+                                <local:CustomSwitch1 IsToggled="{Binding isPercentage, Mode=TwoWay}" Grid.Column="0"/>
 
-                                <Entry Placeholder="Value" Text="{Binding Value}"/>
+                                <Label Text="{Binding isPercentage, Converter={local:BoolToTextConverter}, Mode=OneWay}" Grid.Column="1" VerticalTextAlignment="Center"/>
 
-                                <Entry Placeholder="Name"  Text="{Binding ExpenseName}"/>
+                                <Entry Placeholder="Value" Text="{Binding Value}" Grid.Column="2"/>
 
-                                <Button Text="Delete" Clicked="DeleteButton_Clicked"/>
-                            </HorizontalStackLayout>
-                        </Frame>
+                                <Entry Placeholder="Name"  Text="{Binding ExpenseName}" Grid.Column="3"/>
+
+                                <Button Text="Delete" Clicked="DeleteButton_Clicked" Grid.Column="4"/>
+                            </Grid>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

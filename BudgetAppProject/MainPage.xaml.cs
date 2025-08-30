@@ -173,8 +173,8 @@ namespace BudgetAppProject {
             }
 
             foreach (Expense e in PEViewModel.SelectedProfile.Expenses) {
-                double x = (e.Type == "Percent") ? IncomeAfterTax * (e.Value / 100.0) : e.Value;
-                double xper = (e.Type == "Percent") ? Math.Round((x / a.Income) * 100, 2) : Math.Round((e.Value / a.Income) * 100, 2);
+                double x = (e.isPercentage) ? IncomeAfterTax * (e.Value / 100.0) : e.Value;
+                double xper = (e.isPercentage) ? Math.Round((x / a.Income) * 100, 2) : Math.Round((e.Value / a.Income) * 100, 2);
 
                 TempExpensesList.Add(new DisplayExpense(e.ExpenseName, x, donutChartColors[colorIndex], xper));
                 chartEntries.Add(new ChartEntry((float?)x) { Color = donutChartColors[colorIndex++]});
